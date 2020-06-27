@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 8d7a011f2b8572e409acad43e9f23616
+guid: a4a77bdd069f91e40887431600364f86
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2264406823995662961
-    second: HeDOBeIdlinThough_0
+      213: 3925160962039899417
+    second: HeDOBeJumpinThough_0
   - first:
-      213: -4057134825327091805
-    second: HeDOBeIdlinThough_1
+      213: 2323634373380293381
+    second: HeDOBeJumpinThough_1
+  - first:
+      213: -1095503502075813297
+    second: HeDOBeJumpinThough_2
+  - first:
+      213: 6099096514119705759
+    second: HeDOBeJumpinThough_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,7 +99,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeDOBeIdlinThough_0
+      name: HeDOBeJumpinThough_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9156e9c3919f87630800000000000000
+      internalID: 3925160962039899417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeDOBeJumpinThough_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 33
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5034835c6253f3020800000000000000
+      internalID: 2323634373380293381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeDOBeJumpinThough_2
       rect:
         serializedVersion: 2
         x: 2
@@ -107,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8d94ccadf53390e0800000000000000
-      internalID: -2264406823995662961
+      spriteID: f42239c7e5dfbc0f0800000000000000
+      internalID: -1095503502075813297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeDOBeIdlinThough_1
+      name: HeDOBeJumpinThough_3
       rect:
         serializedVersion: 2
         x: 2
         y: 1
         width: 12
-        height: 12
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3af138a3f5922b7c0800000000000000
-      internalID: -4057134825327091805
+      spriteID: f94ade617f754a450800000000000000
+      internalID: 6099096514119705759
       vertices: []
       indices: 
       edges: []
