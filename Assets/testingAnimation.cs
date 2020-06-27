@@ -22,5 +22,9 @@ public class testingAnimation : MonoBehaviour
         {
             ani.SetBool("fKeyPressed", false);
         }
+        if(Input.GetKey(KeyCode.Space))
+        {
+            ani.SetTrigger("spacePressed");
+        }
     }
 }
