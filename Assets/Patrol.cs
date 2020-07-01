@@ -21,7 +21,16 @@ public class Patrol : MonoBehaviour
     {
         transform.Translate(Vector2.right * currentSpeed * Time.deltaTime);
         RaycastHit2D groundInfo = Physics2D.Raycast(detector.position, Vector2.down, groundDistance, LayerMask.GetMask("Ground"));
-        if(groundInfo == false)
+        RaycastHit2D wallInfo;
+        if(movingRight == true)
+        {
+            wallInfo = Physics2D.Raycast(detector.position, Vector2.right, 2f, ~LayerMask.GetMask("Player"));
+        }
+        else
+        {
+            wallInfo = Physics2D.Raycast(detector.position, Vector2.left, 2f, ~LayerMask.GetMask("Player"));
+        }
+        if(groundInfo == false || wallInfo == true)
         {
             if(movingRight == true)
             {
