@@ -32,11 +32,11 @@ public class Movement : MonoBehaviour
         }
         if (movement < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            transform.eulerAngles = new Vector3(0, -180, 0);
         }
         else if(movement > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
     bool IsGrounded()
