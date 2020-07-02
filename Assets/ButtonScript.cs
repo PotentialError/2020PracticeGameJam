@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
     public void buttonPressed(){
-        Debug.Log("You do be pressin UI Buttons Tho!");
+        SceneManager.LoadScene(0);
     }
 }
