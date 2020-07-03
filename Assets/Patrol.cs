@@ -12,6 +12,7 @@ public class Patrol : MonoBehaviour
     public float health;
     public float dazedTime;
     private float currentTime;
+    public GameObject explosion;
     private void Start()
     {
         currentSpeed = speed;
@@ -52,6 +53,7 @@ public class Patrol : MonoBehaviour
         }
         if(health <= 0)
         {
+            Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
