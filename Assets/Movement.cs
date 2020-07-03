@@ -5,11 +5,13 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Animator animator;
+    private Shoot shootScript;
+    private Rigidbody2D rb;
+
     public int moveSpeed;
     public int jumpForce;
     public float extra = 0.1f;
     private float movement;
-    private Rigidbody2D rb;
     private Vector2 mousePos;
     public GameObject groundPar;
     public Transform playerGround;
@@ -22,6 +24,7 @@ public class Movement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        shootScript = GetComponent<Shoot>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class Movement : MonoBehaviour
         movement = Input.GetAxis("Horizontal");
         if(movement != 0 && IsGrounded()) {
             animator.SetBool("isRunning", true);
-            Instantiate(groundPar, playerGround.position, playerGround.rotation);
+            //Instantiate(groundPar, playerGround.position, playerGround.rotation);
         }
         else {
             animator.SetBool("isRunning", false);
@@ -43,6 +46,16 @@ public class Movement : MonoBehaviour
             //gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             Debug.Log("Jumping");
+        }
+
+        var tempThingy = groundPar.GetComponent<ParticleSystem>().emission;
+        if (IsGrounded() && (rb.velocity.x<-0.1f&&!shootScript.facingRight || rb.velocity.x>0.1f&&shootScript.facingRight))
+        {
+            tempThingy.rateOverDistance = 5f;
+        }
+        else
+        {
+            tempThingy.rateOverDistance = 0f;
         }
         
     }
