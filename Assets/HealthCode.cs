@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class HealthCode : MonoBehaviour
 {
     public Image healthBar;
@@ -10,6 +9,7 @@ public class HealthCode : MonoBehaviour
     public Sprite OneLess;
     public Sprite TwoLess;
     public Sprite Deceased;
+    
 
     void Update()
     {
@@ -24,6 +24,7 @@ public class HealthCode : MonoBehaviour
         }
         if(health==0){
             healthBar.sprite=Deceased;
+            Time.timeScale=0f;
         }
     }
 }
