@@ -10,6 +10,7 @@ public class Shoot : MonoBehaviour
     public Camera cam;
     public Vector2 mousePos;
     public GameObject fire;
+    public bool facingRight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,10 +37,12 @@ public class Shoot : MonoBehaviour
         if (lookDir.x < 0f && Mathf.Abs(lookDir.x) > 1f)
         {
             transform.eulerAngles = new Vector3(0, -180, 0);
+            facingRight = false;
         }
         else if (lookDir.x > 0f && Mathf.Abs(lookDir.x) > 1f)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+            facingRight = true;
         }
         shootPoint.eulerAngles = new Vector3(0, 0, Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg);
     }
