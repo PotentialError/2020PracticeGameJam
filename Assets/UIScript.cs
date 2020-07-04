@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
 {
+    public Text livesText;
+    public static float livesNum=3;
+    public static bool isRestart=false;
+    
     public static bool isPaused=false;
     public GameObject pauseMenuUI;
     public GameObject deadUI;
@@ -16,7 +20,9 @@ public class UIScript : MonoBehaviour
     public Sprite Deceased;
     private bool isDead=false;
     void Start(){
+        isRestart=false;
         Time.timeScale=1f;
+        livesText.text="X"+livesNum;
     }
     // Update is called once per frame
     void Update()
@@ -40,7 +46,12 @@ public class UIScript : MonoBehaviour
         }
         if(health==0){
             healthBar.sprite=Deceased;
+            if(livesNum==0){
             Die();
+            }
+            else if(!isRestart){
+                LivesLost();
+            }
         }
     }
     public void Resume(){
@@ -67,12 +78,20 @@ public class UIScript : MonoBehaviour
          isDead=true;
          deadUI.SetActive(true);
          Time.timeScale=0f;
+         
      }
      public void Restart(){
+         isRestart=true;
          isDead=false;
          deadUI.SetActive(false);
-         SceneManager.LoadScene("SampleScene");
+         SceneManager.LoadScene("MenuScene");
          Time.timeScale=1f;
+         livesNum=3;
+     }
+     public void LivesLost(){
+         livesNum--;
+         SceneManager.LoadScene("SampleScene");
+         livesText.text="X"+livesNum;
      }
 
 
