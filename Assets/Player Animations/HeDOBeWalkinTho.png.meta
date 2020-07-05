@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 9325d067579238546bc77fb4ad018127
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: HeDOBeWalkinTho_0
-    21300002: HeDOBeWalkinTho_1
+  internalIDToNameTable:
+  - first:
+      213: 4920430659793716824
+    second: HeDOBeWalkinTho_0
+  - first:
+      213: -333053104760793300
+    second: HeDOBeWalkinTho_1
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -59,8 +63,9 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -71,7 +76,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -82,6 +88,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,6 +108,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 85602f29d91e84440800000000000000
+      internalID: 4920430659793716824
       vertices: []
       indices: 
       edges: []
@@ -121,6 +129,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c27546f37f1c06bf0800000000000000
+      internalID: -333053104760793300
       vertices: []
       indices: 
       edges: []
@@ -129,10 +138,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
