@@ -1,54 +1,16 @@
 fileFormatVersion: 2
 guid: a71571344b95eb248b8009140c8acd95
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 8000848925899487723
-    second: Piskel Basics_0
-  - first:
-      213: -2838580513291426350
-    second: Piskel Basics_1
-  - first:
-      213: -6878975776055278068
-    second: Piskel Basics_2
-  - first:
-      213: -5135948118617001838
-    second: Piskel Basics_3
-  - first:
-      213: -7262305844833682674
-    second: Piskel Basics_4
-  - first:
-      213: -6832073922278908991
-    second: Piskel Basics_0
-  - first:
-      213: -5857938093152142066
-    second: Piskel Basics_1
-  - first:
-      213: 5695589911533827718
-    second: Piskel Basics_2
-  - first:
-      213: -3888596233461418572
-    second: Piskel Basics_3
-  - first:
-      213: -981434342698166653
-    second: Piskel Basics_4
-  - first:
-      213: 5633227047096058317
-    second: Piskel Basics_5
-  - first:
-      213: -229877911818348270
-    second: Piskel Basics_6
-  - first:
-      213: 7130044441607007373
-    second: Piskel Basics_5
-  - first:
-      213: 7328659296699499482
-    second: Piskel Basics_6
-  - first:
-      213: 643941955106591031
-    second: Piskel Basics_7
+  fileIDToRecycleName:
+    21300000: Piskel Basics_0
+    21300002: Piskel Basics_1
+    21300004: Piskel Basics_2
+    21300006: Piskel Basics_3
+    21300008: Piskel Basics_4
+    21300010: Piskel Basics_5
+    21300012: Piskel Basics_6
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -102,9 +64,8 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -115,8 +76,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 2
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -127,7 +87,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -147,7 +106,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: be9fdc135b9b80f60800000000000000
-      internalID: 8000848925899487723
       vertices: []
       indices: 
       edges: []
@@ -168,7 +126,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2d52be600165b98d0800000000000000
-      internalID: -2838580513291426350
       vertices: []
       indices: 
       edges: []
@@ -189,7 +146,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c0645b16af7f880a0800000000000000
-      internalID: -6878975776055278068
       vertices: []
       indices: 
       edges: []
@@ -210,7 +166,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2907ff4c56279b8b0800000000000000
-      internalID: -5135948118617001838
       vertices: []
       indices: 
       edges: []
@@ -231,7 +186,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e0bf17cbf4b173b90800000000000000
-      internalID: -7262305844833682674
       vertices: []
       indices: 
       edges: []
@@ -252,7 +206,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: dc18849372e3d2e40800000000000000
-      internalID: 5633227047096058317
       vertices: []
       indices: 
       edges: []
@@ -273,7 +226,6 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 219db54d14f4fccf0800000000000000
-      internalID: -229877911818348270
       vertices: []
       indices: 
       edges: []
@@ -282,12 +234,10 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
