@@ -11,20 +11,21 @@ public class HealthCode : MonoBehaviour
     public Sprite Deceased;
     
 
-    void Update()
+    public void damaged()
     {
-        if (Input.GetKeyDown(KeyCode.H)){
-            health--;
+        health--;
+        if (health == 2)
+        {
+            healthBar.sprite = OneLess;
         }
-        if(health==2){
-            healthBar.sprite=OneLess;
+        if (health == 1)
+        {
+            healthBar.sprite = TwoLess;
         }
-        if(health==1){
-            healthBar.sprite=TwoLess;
-        }
-        if(health==0){
-            healthBar.sprite=Deceased;
-            Time.timeScale=0f;
+        if (health == 0)
+        {
+            healthBar.sprite = Deceased;
+            Time.timeScale = 0f;
         }
     }
 }
