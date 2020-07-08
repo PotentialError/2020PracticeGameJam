@@ -13,6 +13,8 @@ public class Patrol : MonoBehaviour
     public float dazedTime;
     private float currentTime;
     public GameObject explosion;
+    public AudioSource hurt;
+    public AudioSource die;
     private void Start()
     {
         currentSpeed = speed;
@@ -53,12 +55,16 @@ public class Patrol : MonoBehaviour
         }
         if(health <= 0)
         {
+            die.Play();
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
     public void damage(float damageAmount)
     {
+        if(health>1){
+        hurt.Play();
+        }
         currentTime = dazedTime;
         health--;
     }

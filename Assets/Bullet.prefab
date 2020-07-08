@@ -144,3 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  damage: 1
+  hit: {fileID: 2990856270509340937, guid: 183604d191745db459d2065fc03306b7, type: 3}
+  die: {fileID: 3733377946550256421, guid: 7820772e5c114f14292f30833cd1425b, type: 3}
