@@ -14,6 +14,18 @@ public class FlyingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GetComponent<Renderer>().isVisible)
+        {
+            GetComponent<Pathfinding.AIPath>().enabled = true;
+            GetComponent<Pathfinding.AIDestinationSetter>().enabled = true;
+            GetComponent<Pathfinding.Seeker>().enabled = true;
+        }
+        else
+        {
+            GetComponent<Pathfinding.AIPath>().enabled = false;
+            GetComponent<Pathfinding.AIDestinationSetter>().enabled = false;
+            GetComponent<Pathfinding.Seeker>().enabled = false;
+        }
         if (health <= 0)
         {
             die.Play();
