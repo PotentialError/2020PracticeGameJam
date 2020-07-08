@@ -1868,6 +1868,11 @@ PrefabInstance:
       propertyPath: groundPar
       value: 
       objectReference: {fileID: 2138529708}
+    - target: {fileID: 6480954116720170011, guid: 91edfe37f188eed43a4b582ddb89f993,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 1061596653}
     - target: {fileID: 6480954116720170012, guid: 91edfe37f188eed43a4b582ddb89f993,
         type: 3}
       propertyPath: m_LocalPosition.x
