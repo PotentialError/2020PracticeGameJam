@@ -27,7 +27,12 @@ public class BulletCode : MonoBehaviour
         {
             enemy.damage(damage);
         }
-        if(collision.name != "SchmanWithGun")
+        FlyingEnemy enemy2 = collision.GetComponent<FlyingEnemy>();
+        if (enemy2 != null)
+        {
+            enemy2.damage(damage);
+        }
+        if (collision.name != "SchmanWithGun")
         {
             Destroy(gameObject);
         }

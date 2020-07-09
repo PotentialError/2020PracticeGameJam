@@ -40,21 +40,27 @@ public class UIScript : MonoBehaviour
                 Pause();
             }
         }
-        if (Input.GetKeyDown(KeyCode.H)){
-            health--;
+    }
+    public void damaged()
+    {
+        health--;
+        if (health == 2)
+        {
+            healthBar.sprite = OneLess;
         }
-        if(health==2){
-            healthBar.sprite=OneLess;
+        if (health == 1)
+        {
+            healthBar.sprite = TwoLess;
         }
-        if(health==1){
-            healthBar.sprite=TwoLess;
-        }
-        if(health==0){
-            healthBar.sprite=Deceased;
-            if(livesNum==0){
-            Die();
+        if (health == 0)
+        {
+            healthBar.sprite = Deceased;
+            if (livesNum == 0)
+            {
+                Die();
             }
-            else if(!isRestart){
+            else if (!isRestart)
+            {
                 LivesLost();
             }
         }
