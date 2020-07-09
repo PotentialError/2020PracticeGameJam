@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
         currentInvinTime = 0;
         isInvin = false;
         startedAnimation = false;
+        transform.position = GlobalData.RespawnPosition;
     }
 
     // Update is called once per frame
