@@ -96,6 +96,7 @@ public class UIScript : MonoBehaviour
          isRestart=true;
          isDead=false;
          deadUI.SetActive(false);
+        GlobalData.RespawnPosition = new Vector3(0, 2.26f, 0);
          SceneManager.LoadScene("MenuScene");
          Time.timeScale=1f;
          livesNum=3;

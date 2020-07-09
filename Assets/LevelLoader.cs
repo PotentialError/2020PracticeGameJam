@@ -23,6 +23,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int level)
     {
         transition.SetTrigger("Start");
+        GlobalData.RespawnPosition = new Vector3(0, 2.26f, 0);
         yield return new WaitForSecondsRealtime(1f);
         SceneManager.LoadScene(level);
     }
