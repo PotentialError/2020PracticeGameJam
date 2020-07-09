@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class UIScript : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class UIScript : MonoBehaviour
     public static bool isPaused=false;
     public GameObject pauseMenuUI;
     public GameObject deadUI;
+    public GameObject pauseOptionsUI;
+
+    public AudioMixer AudioMixer;
+    
     public Image healthBar;
     public float health=3;
     public Sprite OneLess;
@@ -70,6 +75,7 @@ public class UIScript : MonoBehaviour
     public void Pause(){
         if(!isDead){
         pauseMenuUI.SetActive(true);
+        pauseOptionsUI.SetActive(false);
         Time.timeScale=0f;
         isPaused=true;
         }
@@ -100,6 +106,16 @@ public class UIScript : MonoBehaviour
          SceneManager.LoadScene("SampleScene");
          livesText.text="X"+livesNum;
      }
+     public void Options(){
+        pauseMenuUI.SetActive(false);
+        pauseOptionsUI.SetActive(true);
+    }
 
-
+    //Volume Testing
+    public void MusicSet(float volume){
+        AudioMixer.SetFloat("MusicVol",volume);
+    }
+    public void SFXSet(float volume){
+        AudioMixer.SetFloat("SFXVol",volume);
+    }
 }
