@@ -112,9 +112,9 @@ public class UIScript : MonoBehaviour
 
     //Volume Testing
     public void MusicSet(float volume){
-        AudioMixer.SetFloat("MusicVol",volume);
+        AudioMixer.SetFloat("MusicVol",Mathf.Log10(volume)*20);
     }
     public void SFXSet(float volume){
-        AudioMixer.SetFloat("SFXVol",volume);
+        AudioMixer.SetFloat("SFXVol",Mathf.Log10(volume)*20);
     }
 }
