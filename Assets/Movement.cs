@@ -15,8 +15,14 @@ public class Movement : MonoBehaviour
     private Vector2 mousePos;
     public GameObject groundPar;
     public Transform playerGround;
-    
-    
+    public GameObject health;
+    public float invincibleTime = 3f;
+    private float currentInvinTime;
+    private bool isInvin;
+    private bool startedAnimation;
+        
+
+
     // Make sure to use a composite collider for tilemaps so it doesn't stop randomly
     //click using composite collider on the actual collider so it recognized the composite collider
     //Also make sure you have a physics material that has no friction so you don't stick to walls
@@ -25,6 +31,10 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         shootScript = GetComponent<Shoot>();
+        currentInvinTime = 0;
+        isInvin = false;
+        startedAnimation = false;
+        transform.position = GlobalData.RespawnPosition;
     }
 
     // Update is called once per frame
@@ -57,7 +67,17 @@ public class Movement : MonoBehaviour
         {
             tempThingy.rateOverDistance = 0f;
         }
-        
+        currentInvinTime -= Time.deltaTime;
+        if (isInvin && !startedAnimation)
+        {
+            StartCoroutine(blinkingAnimation());
+            startedAnimation = true;
+        }
+        if(currentInvinTime <= 0)
+        {
+            isInvin = false;
+            startedAnimation = false;
+        }
     }
     bool IsGrounded()
     {
@@ -73,6 +93,29 @@ public class Movement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (currentInvinTime <= 0)
+        {
+            if (collision.collider.gameObject.layer == 9)
+            {
+                health.GetComponent<UIScript>().damaged();
+                currentInvinTime = invincibleTime;
+                isInvin = true;
+            }
+        }
+        
+    }
+    IEnumerator blinkingAnimation()
+    {
+        while(isInvin)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.05f);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.05f);
         }
     }
 }
