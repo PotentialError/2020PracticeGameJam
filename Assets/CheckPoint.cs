@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
+    [SerializeField] public Animator CheckpointAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class CheckPoint : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             GlobalData.RespawnPosition = transform.position;
+            CheckpointAnimator.SetBool("hasCheckpoint",true);
         }
     }
 }

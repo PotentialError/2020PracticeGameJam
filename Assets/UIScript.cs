@@ -93,13 +93,14 @@ public class UIScript : MonoBehaviour
          
      }
      public void Restart(){
-         isRestart=true;
-         isDead=false;
-         deadUI.SetActive(false);
+        isRestart =true;
+        isDead =false;
+        deadUI.SetActive(false);
         GlobalData.RespawnPosition = new Vector3(0, 2.26f, 0);
-         SceneManager.LoadScene("MenuScene");
-         Time.timeScale=1f;
-         livesNum=3;
+        Time.timeScale = 1f;
+        livesNum = 3;
+        SceneManager.LoadScene("MenuScene");
+
      }
      public void LivesLost(){
          livesNum--;
