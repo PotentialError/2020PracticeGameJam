@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     private float currentInvinTime;
     private bool isInvin;
     private bool startedAnimation;
+    public bool isGrounded = false;
         
 
 
@@ -41,7 +42,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
-        if(movement != 0 && IsGrounded()) {
+        if(movement != 0 && isGrounded) {
             animator.SetBool("isRunning", true);
             //Instantiate(groundPar, playerGround.position, playerGround.rotation);
         }
@@ -50,7 +51,7 @@ public class Movement : MonoBehaviour
         }
         //transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * moveSpeed;
         
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded() && rb.velocity.y < 0.5f && rb.velocity.y > -0.5f)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && rb.velocity.y < 0.5f && rb.velocity.y > -0.5f)
         {
             animator.SetTrigger("isJumping");
             //gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -59,7 +60,7 @@ public class Movement : MonoBehaviour
         }
 
         var tempThingy = groundPar.GetComponent<ParticleSystem>().emission;
-        if (IsGrounded() && (rb.velocity.x<-0.1f&&!shootScript.facingRight || rb.velocity.x>0.1f&&shootScript.facingRight))
+        if (isGrounded && (rb.velocity.x<-0.1f&&!shootScript.facingRight || rb.velocity.x>0.1f&&shootScript.facingRight))
         {
             tempThingy.rateOverDistance = 5f;
         }
